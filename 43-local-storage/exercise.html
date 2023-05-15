@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+const user = {
+  id: 1,
+  name: "John",
+  age: 25,
+};
+const saveUserToLocalStorage = (user) => {
+  const userJson = JSON.stringify(user);
+  console.log(userJson)
+  localStorage.setItem("user", userJson);
+}
+saveUserToLocalStorage(user);
+const savedUserJson = localStorage.getItem("user")
+const savedUser = JSON.parse(savedUserJson)
+console.log(savedUser)
+
+</script>
+</html>
